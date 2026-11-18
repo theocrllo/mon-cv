@@ -1,0 +1,150 @@
+
+/* ===== CORPS DE LA PAGE ===== */
+
+body {
+    background-image: url("images/coolbackgrounds-particles-ether.png");
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 30px;
+    justify-content: space-around;
+}
+
+/* ===== LISTES ===== */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* ===== SECTIONS DU CV ===== */
+
+section {
+    background-color: #3498dbcf;
+    color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    animation: apparition 1s ease-out;
+}
+
+section:hover{
+    background-color: #48a8e8e4;
+}
+
+/* ===== LIENS ET BOUTONS ===== */
+
+a,
+button {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #3498db;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+
+    /* Curseur en forme de main */
+    cursor: pointer;
+
+    /* Animation fluide */
+    transition: all 0.3s ease;
+}
+
+/* ===== EFFET AU SURVOL ===== */
+
+a:hover,
+button:hover {
+    background-color: #217dbb;
+
+    /* Le bouton monte légèrement */
+    transform: translateY(-5px);
+
+    /* Ombre plus prononcée */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== EFFET AU CLIC ===== */
+
+a:active,
+button:active {
+    /* Le bouton rétrécit */
+    transform: scale(0.95);
+}
+
+/* ===== NAVIGATION AU CLAVIER ===== */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #003d73;
+    outline-offset: 4px;
+}
+
+/* ===== PIED DE PAGE ===== */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+
+}
+
+.github {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.github img{
+    transform: scale(1.5);
+}
+
+
+.titre-cv {
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+
+    background: linear-gradient(90deg, #228bd0, #65c6ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+
+    animation: apparition 1s ease-out;
+}
+
+.titre-cv::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 10px;
+    background: #3498db;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
